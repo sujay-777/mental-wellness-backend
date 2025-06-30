@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const { auth } = require('../middleware/auth');
-const Chatbot = require('../../chatbot/chatbot');
+// const Chatbot = require('../../chatbot/chatbot');
+const Chatbot = require('../chatbot')
 const ChatLog = require('../models/ChatLog');
 const adminAuth = require('../middleware/adminAuth');
 const ChatMessage = require('../models/ChatMessage');
