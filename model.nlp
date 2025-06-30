@@ -1,0 +1,839 @@
+{
+  "settings": {
+    "languages": [
+      "en"
+    ],
+    "forceNER": true,
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": true,
+    "modelFileName": "model.nlp",
+    "executeActionsBeforeAnswers": false,
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "en"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "en": {
+        "settings": {
+          "locale": "en",
+          "trainByDomain": false,
+          "tag": "domain-manager-en",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "hello": {
+            "intent": "greeting",
+            "domain": "default"
+          },
+          "hi": {
+            "intent": "greeting",
+            "domain": "default"
+          },
+          "hey": {
+            "intent": "greeting",
+            "domain": "default"
+          },
+          "howdi": {
+            "intent": "greeting",
+            "domain": "default"
+          },
+          "anxious,feel,i": {
+            "intent": "anxiety",
+            "domain": "default"
+          },
+          "anxieti,have,i": {
+            "intent": "anxiety",
+            "domain": "default"
+          },
+          "worri": {
+            "intent": "anxiety",
+            "domain": "default"
+          },
+          "nervous": {
+            "intent": "anxiety",
+            "domain": "default"
+          },
+          "panic": {
+            "intent": "anxiety",
+            "domain": "default"
+          },
+          "am,i,stress": {
+            "intent": "stress",
+            "domain": "default"
+          },
+          "overwhelm": {
+            "intent": "stress",
+            "domain": "default"
+          },
+          "pressur": {
+            "intent": "stress",
+            "domain": "default"
+          },
+          "tension": {
+            "intent": "stress",
+            "domain": "default"
+          },
+          "depress,feel,i": {
+            "intent": "depression",
+            "domain": "default"
+          },
+          "sad": {
+            "intent": "depression",
+            "domain": "default"
+          },
+          "down": {
+            "intent": "depression",
+            "domain": "default"
+          },
+          "hopeless": {
+            "intent": "depression",
+            "domain": "default"
+          },
+          "empti": {
+            "intent": "depression",
+            "domain": "default"
+          },
+          "ca,not,sleep": {
+            "intent": "sleep",
+            "domain": "default"
+          },
+          "insomnia": {
+            "intent": "sleep",
+            "domain": "default"
+          },
+          "tire": {
+            "intent": "sleep",
+            "domain": "default"
+          },
+          "exhaust": {
+            "intent": "sleep",
+            "domain": "default"
+          },
+          "problem,sleep": {
+            "intent": "sleep",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "greeting": "default",
+          "anxiety": "default",
+          "stress": "default",
+          "depression": "default",
+          "sleep": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "hello",
+            "intent": "greeting"
+          },
+          {
+            "domain": "default",
+            "utterance": "hi",
+            "intent": "greeting"
+          },
+          {
+            "domain": "default",
+            "utterance": "hey",
+            "intent": "greeting"
+          },
+          {
+            "domain": "default",
+            "utterance": "howdy",
+            "intent": "greeting"
+          },
+          {
+            "domain": "default",
+            "utterance": "I feel anxious",
+            "intent": "anxiety"
+          },
+          {
+            "domain": "default",
+            "utterance": "I have anxiety",
+            "intent": "anxiety"
+          },
+          {
+            "domain": "default",
+            "utterance": "worried",
+            "intent": "anxiety"
+          },
+          {
+            "domain": "default",
+            "utterance": "nervous",
+            "intent": "anxiety"
+          },
+          {
+            "domain": "default",
+            "utterance": "panic",
+            "intent": "anxiety"
+          },
+          {
+            "domain": "default",
+            "utterance": "I am stressed",
+            "intent": "stress"
+          },
+          {
+            "domain": "default",
+            "utterance": "overwhelmed",
+            "intent": "stress"
+          },
+          {
+            "domain": "default",
+            "utterance": "pressure",
+            "intent": "stress"
+          },
+          {
+            "domain": "default",
+            "utterance": "tension",
+            "intent": "stress"
+          },
+          {
+            "domain": "default",
+            "utterance": "I feel depressed",
+            "intent": "depression"
+          },
+          {
+            "domain": "default",
+            "utterance": "sad",
+            "intent": "depression"
+          },
+          {
+            "domain": "default",
+            "utterance": "down",
+            "intent": "depression"
+          },
+          {
+            "domain": "default",
+            "utterance": "hopeless",
+            "intent": "depression"
+          },
+          {
+            "domain": "default",
+            "utterance": "empty",
+            "intent": "depression"
+          },
+          {
+            "domain": "default",
+            "utterance": "can't sleep",
+            "intent": "sleep"
+          },
+          {
+            "domain": "default",
+            "utterance": "insomnia",
+            "intent": "sleep"
+          },
+          {
+            "domain": "default",
+            "utterance": "tired",
+            "intent": "sleep"
+          },
+          {
+            "domain": "default",
+            "utterance": "exhausted",
+            "intent": "sleep"
+          },
+          {
+            "domain": "default",
+            "utterance": "sleep problems",
+            "intent": "sleep"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "en",
+              "tag": "nlu-en",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "hello": 1,
+              "hi": 1,
+              "hey": 1,
+              "howdi": 1,
+              "i": 1,
+              "feel": 1,
+              "anxious": 1,
+              "have": 1,
+              "anxieti": 1,
+              "worri": 1,
+              "nervous": 1,
+              "panic": 1,
+              "am": 1,
+              "stress": 1,
+              "overwhelm": 1,
+              "pressur": 1,
+              "tension": 1,
+              "depress": 1,
+              "sad": 1,
+              "down": 1,
+              "hopeless": 1,
+              "empti": 1,
+              "ca": 1,
+              "not": 1,
+              "sleep": 1,
+              "insomnia": 1,
+              "tire": 1,
+              "exhaust": 1,
+              "problem": 1
+            },
+            "intents": {
+              "greeting": 1,
+              "anxiety": 1,
+              "stress": 1,
+              "depression": 1,
+              "sleep": 1
+            },
+            "intentFeatures": {
+              "greeting": {
+                "hello": 1,
+                "hi": 1,
+                "hey": 1,
+                "howdi": 1
+              },
+              "anxiety": {
+                "i": 1,
+                "feel": 1,
+                "anxious": 1,
+                "have": 1,
+                "anxieti": 1,
+                "worri": 1,
+                "nervous": 1,
+                "panic": 1
+              },
+              "stress": {
+                "i": 1,
+                "am": 1,
+                "stress": 1,
+                "overwhelm": 1,
+                "pressur": 1,
+                "tension": 1
+              },
+              "depression": {
+                "i": 1,
+                "feel": 1,
+                "depress": 1,
+                "sad": 1,
+                "down": 1,
+                "hopeless": 1,
+                "empti": 1
+              },
+              "sleep": {
+                "ca": 1,
+                "not": 1,
+                "sleep": 1,
+                "insomnia": 1,
+                "tire": 1,
+                "exhaust": 1,
+                "problem": 1
+              }
+            },
+            "featuresToIntent": {
+              "hello": [
+                "greeting"
+              ],
+              "hi": [
+                "greeting"
+              ],
+              "hey": [
+                "greeting"
+              ],
+              "howdi": [
+                "greeting"
+              ],
+              "i": [
+                "anxiety",
+                "stress",
+                "depression"
+              ],
+              "feel": [
+                "anxiety",
+                "depression"
+              ],
+              "anxious": [
+                "anxiety"
+              ],
+              "have": [
+                "anxiety"
+              ],
+              "anxieti": [
+                "anxiety"
+              ],
+              "worri": [
+                "anxiety"
+              ],
+              "nervous": [
+                "anxiety"
+              ],
+              "panic": [
+                "anxiety"
+              ],
+              "am": [
+                "stress"
+              ],
+              "stress": [
+                "stress"
+              ],
+              "overwhelm": [
+                "stress"
+              ],
+              "pressur": [
+                "stress"
+              ],
+              "tension": [
+                "stress"
+              ],
+              "depress": [
+                "depression"
+              ],
+              "sad": [
+                "depression"
+              ],
+              "down": [
+                "depression"
+              ],
+              "hopeless": [
+                "depression"
+              ],
+              "empti": [
+                "depression"
+              ],
+              "ca": [
+                "sleep"
+              ],
+              "not": [
+                "sleep"
+              ],
+              "sleep": [
+                "sleep"
+              ],
+              "insomnia": [
+                "sleep"
+              ],
+              "tire": [
+                "sleep"
+              ],
+              "exhaust": [
+                "sleep"
+              ],
+              "problem": [
+                "sleep"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "en",
+                "tag": "nlu-en",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "hello",
+                "hi",
+                "hey",
+                "howdi",
+                "i",
+                "feel",
+                "anxious",
+                "have",
+                "anxieti",
+                "worri",
+                "nervous",
+                "panic",
+                "am",
+                "stress",
+                "overwhelm",
+                "pressur",
+                "tension",
+                "depress",
+                "sad",
+                "down",
+                "hopeless",
+                "empti",
+                "ca",
+                "not",
+                "sleep",
+                "insomnia",
+                "tire",
+                "exhaust",
+                "problem"
+              ],
+              "intents": [
+                "greeting",
+                "anxiety",
+                "stress",
+                "depression",
+                "sleep"
+              ],
+              "perceptrons": [
+                [
+                  11.336548805236816,
+                  11.322344779968262,
+                  11.284379005432129,
+                  11.244444847106934,
+                  -2.0192160606384277,
+                  -0.8103538155555725,
+                  -0.6067104339599609,
+                  -0.6531751751899719,
+                  -0.6531751751899719,
+                  -2.8181121349334717,
+                  -2.8104660511016846,
+                  -2.802272081375122,
+                  -0.5128679275512695,
+                  -0.5128679275512695,
+                  -2.792922258377075,
+                  -2.7835772037506104,
+                  -2.7737085819244385,
+                  -0.16694359481334686,
+                  -2.7631216049194336,
+                  -2.7522075176239014,
+                  -2.74079966545105,
+                  -2.728907346725464,
+                  -0.6439042687416077,
+                  -0.6439042687416077,
+                  -1.7139836549758911,
+                  -2.7157111167907715,
+                  -2.7027792930603027,
+                  -2.689396858215332,
+                  -1.0621439218521118,
+                  2.7904655666160734
+                ],
+                [
+                  -2.250136137008667,
+                  -2.2390615940093994,
+                  -2.2276151180267334,
+                  -2.215806484222412,
+                  2.9408178329467773,
+                  1.2466431856155396,
+                  7.710721015930176,
+                  4.517230033874512,
+                  4.517230033874512,
+                  11.789233207702637,
+                  11.748382568359375,
+                  11.70546817779541,
+                  -2.8105311393737793,
+                  -2.8105311393737793,
+                  -2.364046573638916,
+                  -2.355032444000244,
+                  -2.3475341796875,
+                  -6.466733455657959,
+                  -2.320193290710449,
+                  -2.3128738403320312,
+                  -2.305129289627075,
+                  -2.296966791152954,
+                  -0.5727936029434204,
+                  -0.5727936029434204,
+                  -1.4557571411132812,
+                  -2.2877180576324463,
+                  -2.2786524295806885,
+                  -2.269190549850464,
+                  -0.8675277829170227,
+                  2.3273217641962822
+                ],
+                [
+                  -2.200640916824341,
+                  -2.1915056705474854,
+                  -2.1819748878479004,
+                  -2.17205810546875,
+                  1.2178537845611572,
+                  -2.4787750244140625,
+                  -0.9780393242835999,
+                  -1.727922797203064,
+                  -1.727922797203064,
+                  -2.1565566062927246,
+                  -2.1453747749328613,
+                  -2.133838176727295,
+                  5.424671649932861,
+                  5.424671649932861,
+                  11.892690658569336,
+                  11.852738380432129,
+                  11.81069564819336,
+                  -1.4837665557861328,
+                  -2.253580331802368,
+                  -2.2482359409332275,
+                  -2.2424561977386475,
+                  -2.2362492084503174,
+                  -0.6157270669937134,
+                  -0.6157270669937134,
+                  -1.4525033235549927,
+                  -2.2288637161254883,
+                  -2.221719980239868,
+                  -2.2141668796539307,
+                  -0.8005560040473938,
+                  2.2466367409281975
+                ],
+                [
+                  -2.890282154083252,
+                  -2.8806746006011963,
+                  -2.870509147644043,
+                  -2.8597967624664307,
+                  -0.027027495205402374,
+                  2.8561630249023438,
+                  -5.645040988922119,
+                  -1.4524568319320679,
+                  -1.4524568319320679,
+                  -2.8232221603393555,
+                  -2.8101131916046143,
+                  -2.796515941619873,
+                  -1.4286763668060303,
+                  -1.4286763668060303,
+                  -2.779294967651367,
+                  -2.764495849609375,
+                  -2.74924898147583,
+                  8.504349708557129,
+                  11.262910842895508,
+                  11.226258277893066,
+                  11.187623977661133,
+                  11.147035598754883,
+                  -0.9079293608665466,
+                  -0.9079293608665466,
+                  -2.016054630279541,
+                  -2.9168825149536133,
+                  -2.9095776081085205,
+                  -2.902043342590332,
+                  -1.0638312101364136,
+                  2.911146721296824
+                ],
+                [
+                  -2.5447211265563965,
+                  -2.538562536239624,
+                  -2.5319528579711914,
+                  -2.524851083755493,
+                  -1.7985684871673584,
+                  -0.7295981645584106,
+                  -0.5111037492752075,
+                  -0.5549877285957336,
+                  -0.5549877285957336,
+                  -2.515841484069824,
+                  -2.5075924396514893,
+                  -2.498871326446533,
+                  -0.43282419443130493,
+                  -0.43282419443130493,
+                  -2.4891297817230225,
+                  -2.4794178009033203,
+                  -2.469259023666382,
+                  -0.16348068416118622,
+                  -2.45845103263855,
+                  -2.4473979473114014,
+                  -2.4359257221221924,
+                  -2.424044609069824,
+                  2.3763015270233154,
+                  2.3763015270233154,
+                  7.043910503387451,
+                  11.611132621765137,
+                  11.57223129272461,
+                  11.531283378601074,
+                  4.668044090270996,
+                  2.540332658475497
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "en",
+        "hello"
+      ],
+      [
+        "en",
+        "hi"
+      ],
+      [
+        "en",
+        "hey"
+      ],
+      [
+        "en",
+        "howdy"
+      ],
+      [
+        "en",
+        "I feel anxious"
+      ],
+      [
+        "en",
+        "I have anxiety"
+      ],
+      [
+        "en",
+        "worried"
+      ],
+      [
+        "en",
+        "nervous"
+      ],
+      [
+        "en",
+        "panic"
+      ],
+      [
+        "en",
+        "I am stressed"
+      ],
+      [
+        "en",
+        "overwhelmed"
+      ],
+      [
+        "en",
+        "pressure"
+      ],
+      [
+        "en",
+        "tension"
+      ],
+      [
+        "en",
+        "I feel depressed"
+      ],
+      [
+        "en",
+        "sad"
+      ],
+      [
+        "en",
+        "down"
+      ],
+      [
+        "en",
+        "hopeless"
+      ],
+      [
+        "en",
+        "empty"
+      ],
+      [
+        "en",
+        "can't sleep"
+      ],
+      [
+        "en",
+        "insomnia"
+      ],
+      [
+        "en",
+        "tired"
+      ],
+      [
+        "en",
+        "exhausted"
+      ],
+      [
+        "en",
+        "sleep problems"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {
+      "en": {
+        "greeting": [
+          {
+            "answer": "Hello! How can I help you today?"
+          },
+          {
+            "answer": "Hi there! How are you feeling?"
+          },
+          {
+            "answer": "Welcome! I'm here to listen and support you."
+          }
+        ],
+        "anxiety": [
+          {
+            "answer": "I understand you're feeling anxious. Would you like to try a quick breathing exercise?"
+          },
+          {
+            "answer": "It's okay to feel anxious. Let's take a moment to breathe together."
+          },
+          {
+            "answer": "Would you like to talk about what's making you feel anxious?"
+          }
+        ],
+        "stress": [
+          {
+            "answer": "Stress can be challenging. Would you like to try a quick stress-relief technique?"
+          },
+          {
+            "answer": "Let's take a moment to identify what's causing your stress."
+          },
+          {
+            "answer": "Remember to take deep breaths. Would you like to try a guided relaxation exercise?"
+          }
+        ],
+        "depression": [
+          {
+            "answer": "I'm here to listen and support you. Would you like to talk about what you're feeling?"
+          },
+          {
+            "answer": "It's important to acknowledge these feelings. Would you like to speak with a therapist?"
+          },
+          {
+            "answer": "Remember that you're not alone. Would you like to try some coping strategies?"
+          }
+        ],
+        "sleep": [
+          {
+            "answer": "Sleep issues can be challenging. Would you like to try some sleep hygiene tips?"
+          },
+          {
+            "answer": "Let's explore what might be affecting your sleep."
+          },
+          {
+            "answer": "Would you like to try a guided relaxation exercise before bed?"
+          }
+        ],
+        "None": [
+          {
+            "answer": "I'm here to listen. Would you like to tell me more about how you're feeling?"
+          }
+        ]
+      }
+    }
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}
